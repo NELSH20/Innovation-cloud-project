@@ -1,0 +1,178 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 940px; 
+	padding: 0 10px; 
+}
+
+
+/* Header */
+/* use la funcion "brackground: url () para poner la imagen*/
+.header {
+  color: white;
+  background: url("https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/bg.jpg")no-repeat center center;
+  background-size: cover;
+  height: 800px;
+  text-align: center; 
+}
+
+.header .container {
+	position: relative;
+	top: 200px;
+}
+
+.header h1 {
+	font-size: 80px;
+	line-height: 100px; 
+	margin-top: 0;
+	margin-bottom: 80px;
+}
+
+@media (min-width:850px) {
+	.header h1 {
+		font-size: 120px;
+	}
+}
+
+.header p {
+	font-weight: 500;
+	letter-spacing: 8px;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+/* esto es una funcion de boton, se le da a los botones para afecten su accion ya sea reenviandote a un sitio web. esta especificaciones para darle estylo color y funcionalidad*/
+.btn {     color: #fff;
+    background: #000;
+    padding: 10px 40px;
+    text-decoration: none;
+    transition: background .5s;
+  /* relleno con funcion de manesillas de reloj, 20px es para el relleno superior pero tambien actua como reflejo por lo tanto la parte inferior el padding es 20px, 40px es el relleno de la derecha por lotanto tambien la izquierda*/ 
+}
+.btn:hover {
+	background: #100;
+  /* esto define que pasa cuando el puntor en este caso el maus se asoma sobre el boton*/
+	cursor: pointer; 
+	transition: background .5s;  
+}
+
+
+/* Nav */
+.nav {background: black;
+height:80px;
+width:100%;}
+/* esto para darle efecto de transicion de color al asomar el maus sobre el texto*/
+.nav ul {
+  /* esta es la altura de la barra "<ul>" */
+  height: 80px;
+  /*estilo*/
+	list-style: none;
+  /*espacio entresi*/
+	margin: 0 auto; 
+  /*espacio entre el contenido*/
+	padding: 0; 
+}
+/* esto es espeficicando alterar nadamas los elementos dentro la lista cada uno indiviualmente */
+.nav ul li{
+ /* background: white; */
+  color: #fff;
+  display: inline-block;
+  /* ambos factores de abajo afectan la altura de la cacilla y la altura de la linea*/
+  height: 80px;
+  line-height: 80px;
+  list-style: none;
+  /* grosor entre el texto y la cacilla, corre como las manecillas del reloj 0 es la altura pero tambien funciona como reflejo por lotanto el relleno inferior tambien es 0,  por lo tanto 10px es el relleno de izquiero y la derecha*/  
+  padding: 0 10px;
+  /*el tiempo  que toma en gradualmente tomar efecto el camnbio de color*/
+transition: background .5s;
+}
+
+/* "esta espeficicacion es para el efecto de cambiar color mientras el maus se asoma por ensima del texto */
+.btn:hover,.nav ul li:hover{
+  background: #117bff;
+  /*esto indica que el cursor se transforma en puntero*/
+  cursor: pointer;
+  transition: background.5s;
+} 
+
+/* Main */
+.main{ padding: 80px 0px;} 
+
+.main img{ float:left;
+ margin: 50px 80px 50px;}
+
+  
+
+.main .container {
+	margin: auto;
+}
+/* aqui debe de haber una especioficacion para el parrafo*/
+
+/* Jumbotron */
+/* usare la funcion float para mantener la nuve del lado izquierdo de la pantalla */
+
+.jumbotron{background: url(https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/jumbotron_bg.jpg);
+    background-size: cover;
+    height: 600px;}
+
+.jumbotron .container {
+	position: relative;
+	top: 220px;
+}
+
+.jumbotron h2 {
+  font-size: 80px;
+	line-height: 100px; 
+	margin-top: 0;
+	margin-bottom: 80px;
+	color: #fff;
+	text-align: right; 
+}
+
+.jumbotron p {
+  font-weight: 500;
+	letter-spacing: 8px;
+	margin-bottom: 40px;
+	margin-top: 0;
+  color: #fff;
+	text-align: right; 
+}
+
+.jumbotron .btn { background: url(https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/jumbotron_bg.jpg);
+	margin: 10px 0 0;
+  float: right;}
+/* Footer */
+.footer{background-color: black;
+	font-size: 14px;
+}
+.footer p {
+  color: #fff;
+  font-size: 14px;
+  height: 80px;
+  line-height:80px;
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 50px;
+    line-height: 64px;
+  }
+
+  .main, .jumbotron {
+    padding: 0 30px;
+  }
+
+  .main img {
+    width: 100%;
+  }
+}
